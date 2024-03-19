@@ -21,24 +21,27 @@ crossorigin="anonymous"
 defer
 ></script>
 <!-- axios-->
-<script
-src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
-defer
-></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <!-- vue -->
-<script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 
 
 
 </head>
 <body>
+  
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <button @click="generaMail">Genera 10 Email</button>
+    <ul>
+      <li v-for="(email, index) in mail" :key="index">{{ email }}</li>
+    </ul>
+  </div>
 
-
-  <div id="app">{{ message }}</div>
-    
+  
 <!-- js  -->
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
